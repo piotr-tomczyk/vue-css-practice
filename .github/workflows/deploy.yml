@@ -27,7 +27,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm i
 
       - name: Build VuePress site
         run: pnpm build
