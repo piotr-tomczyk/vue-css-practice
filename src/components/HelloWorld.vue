@@ -12,7 +12,7 @@
     <div class="card">
         <button
             type="button"
-            @click="count++">
+            @click="count--">
             count is {{ count }}
         </button>
         <p>
