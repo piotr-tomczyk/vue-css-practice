@@ -1,7 +1,9 @@
 <script setup lang="ts">
-    import { ref } from 'vue';
+    import { ref, computed } from 'vue';
 
     defineProps<{ msg: string }>();
+
+    const doubleCount = computed(() => count.value * 2);
 
     const count = ref(0);
 </script>
@@ -12,8 +14,8 @@
     <div class="card">
         <button
             type="button"
-            @click="count--">
-            count is {{ count }}
+            @click="count++">
+            doubled count is {{ doubleCount }}
         </button>
         <p>
             Edit
